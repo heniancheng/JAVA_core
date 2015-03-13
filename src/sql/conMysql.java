@@ -12,6 +12,13 @@ public class conMysql {
 		// TODO Auto-generated method stub
 		Class.forName("com.mysql.jdbc.Driver");
 		Connection conn=DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test","root","admin");
+		
+//		Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver");
+//		Connection conn=DriverManager.getConnection("jdbc:microsoft:sqlserver://127.0.0.1:1433;DatabaseName=test","root","admin");
+//		
+//		Class.forName("oracle.jdbc.driver.OracleDriver");
+//		Connection conn=DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:test","root","admin");
+		
 		Statement state=conn.createStatement();
 		ResultSet rs=state.executeQuery("select * from student");
 		while(rs.next()){
